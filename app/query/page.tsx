@@ -2,8 +2,7 @@
 
 import type React from "react"
 import { useState } from "react"
-import { Header } from "@/components/header"
-import { Footer } from "@/components/footer"
+
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -69,7 +68,7 @@ export default function QueryPage() {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {/* Contact Form */}
-            <Card>
+            {/* <Card>
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <MessageSquare className="h-5 w-5 text-blue-500" />
@@ -118,7 +117,7 @@ export default function QueryPage() {
                   </Button>
                 </form>
               </CardContent>
-            </Card>
+            </Card> */}
 
             {/* Google Form & Contact Info */}
             <div className="space-y-6">
@@ -135,7 +134,7 @@ export default function QueryPage() {
                 </CardHeader>
                 <CardContent>
                   <a
-                    href="https://docs.google.com/forms/d/e/1FAIpQLSclRI95PV__qCDVn3VHFy-7rA5VmgXOuQcZ0BQyl3XTdNBqYA/viewform?usp=dialog"
+                    href="https://docs.google.com/forms/d/e/1FAIpQLSd_kPIRfHSsyZUYPoZh8VGSD7A9G9_yZ7xuPnXlMaZHL6qzrg/viewform?usp=dialog"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-full"

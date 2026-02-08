@@ -1,3 +1,4 @@
+export const dynamic = 'force-dynamic';
 // // // // // import { type NextRequest, NextResponse } from "next/server"
 // // // // // import { dbConnect } from "@/lib/mongodb"
 // // // // // import OrderModel from "@/lib/models/order"

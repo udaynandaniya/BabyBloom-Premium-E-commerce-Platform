@@ -1,3 +1,4 @@
+export const dynamic = 'force-dynamic';
 // app/api/auth/reset-by-old/route.ts
 
 import { type NextRequest, NextResponse } from "next/server"

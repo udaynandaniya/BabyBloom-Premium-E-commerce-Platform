@@ -34,7 +34,7 @@ export function ImageUpload({ images, onImagesChange, maxImages = 10, acceptVide
         body: formData,
       },
     )
-    console.log("\n\n\nNEXT_PUBLIC_CLOUDINARY_CLOUD_NAME:", process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME)
+    // console.log("\n\n\nNEXT_PUBLIC_CLOUDINARY_CLOUD_NAME:", process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME)
     
     
     if (!response.ok) {

@@ -1,3 +1,4 @@
+export const dynamic = 'force-dynamic';
 
 
 // // // // //C:\Users\UDAYN\Downloads\Projects\mahadev-baby\app\api\auth\register\route.ts
@@ -646,7 +647,7 @@ export async function POST(req: NextRequest) {
 
     return response
   } catch (error: any) {
-    console.error("[REGISTER] Unexpected error:", error)
+    // console.error("[REGISTER] Unexpected error:", error)
 
     if (error.code === 11000) {
       const field = Object.keys(error.keyPattern)[0]

@@ -1,3 +1,4 @@
+export const dynamic = 'force-dynamic';
 // //C:\Users\UDAYN\Downloads\Projects\mahadev-baby\app\api\products\bath\route.ts
 
 // import { NextResponse } from "next/server"

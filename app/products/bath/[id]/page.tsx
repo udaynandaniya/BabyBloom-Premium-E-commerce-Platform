@@ -66,7 +66,7 @@ export default function BathDetailPage() {
     try {
       setIsLoading(true)
       const response = await fetch(`/api/products/bath/${id}`)
-      console.log("\n📦 Fetching bath item:", id)
+      // console.log("\n📦 Fetching bath item:", id)
       if (!response.ok) throw new Error("Failed to fetch")
       const data = await response.json()
       setItem(data.data)

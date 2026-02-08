@@ -1,3 +1,4 @@
+export const dynamic = 'force-dynamic';
 import { type NextRequest, NextResponse } from "next/server"
 import { ReviewModel } from "@/lib/models/reviewModel"
 import { decrypt } from "@/lib/auth"

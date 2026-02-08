@@ -98,13 +98,13 @@ export function Hero() {
                 className="group relative overflow-hidden bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 hover:from-pink-600 hover:via-purple-600 hover:to-blue-600 text-white shadow-2xl hover:shadow-pink-500/25 dark:hover:shadow-pink-500/40 transition-all duration-500 rounded-xl md:rounded-2xl px-6 md:px-8 py-4 md:py-6 text-base md:text-lg font-semibold"
                 asChild
               >
-                <Link href="/user/products">
+                <Link href="/products/clothes">
                   <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" />
                   Shop Now
                   <ArrowRight className="ml-2 h-4 w-4 md:h-5 md:w-5 group-hover:translate-x-1 transition-transform" />
                 </Link>
               </Button>
-              <Button
+              {/* <Button
                 variant="outline"
                 size="lg"
                 className="group border-2 border-purple-200 dark:border-purple-700 hover:border-purple-300 dark:hover:border-purple-600 bg-white/60 dark:bg-gray-800/60 hover:bg-white/80 dark:hover:bg-gray-800/80 backdrop-blur-sm transition-all duration-300 rounded-xl md:rounded-2xl px-6 md:px-8 py-4 md:py-6 text-base md:text-lg font-semibold hover:shadow-lg"
@@ -114,7 +114,7 @@ export function Hero() {
                   Browse Categories
                   <Sparkles className="ml-2 h-4 w-4 md:h-5 md:w-5 group-hover:rotate-12 transition-transform" />
                 </Link>
-              </Button>
+              </Button> */}
             </div>
 
             {/* Premium Stats - Mobile Grid */}

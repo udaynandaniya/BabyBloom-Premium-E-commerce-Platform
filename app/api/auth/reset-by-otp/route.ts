@@ -1,3 +1,4 @@
+export const dynamic = 'force-dynamic';
 
 
 //app/api/auth/reset-by-otp/route.ts

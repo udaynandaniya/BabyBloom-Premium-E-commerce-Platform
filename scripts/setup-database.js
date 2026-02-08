@@ -77,7 +77,7 @@ async function setupDatabase() {
 
   try {
     await client.connect()
-    console.log("Connected to MongoDB")
+    // console.log("Connected to MongoDB")
 
     const db = client.db()
 
@@ -87,16 +87,16 @@ async function setupDatabase() {
     for (const collectionName of collections) {
       try {
         await db.createCollection(collectionName)
-        console.log(`Created collection: ${collectionName}`)
+        // console.log(`Created collection: ${collectionName}`)
       } catch (error) {
-        console.log(`Collection ${collectionName} already exists`)
+        // console.log(`Collection ${collectionName} already exists`)
       }
     }
 
     // Insert sample data
     await insertSampleData(db)
 
-    console.log("Database setup completed successfully!")
+    // console.log("Database setup completed successfully!")
   } catch (error) {
     console.error("Database setup failed:", error)
   } finally {
@@ -114,9 +114,9 @@ async function insertSampleData(db) {
 
   try {
     await db.collection("categories").insertMany(categories)
-    console.log("Inserted sample categories")
+    // console.log("Inserted sample categories")
   } catch (error) {
-    console.log("Categories already exist")
+    // console.log("Categories already exist")
   }
 
   // Sample products
@@ -223,9 +223,9 @@ async function insertSampleData(db) {
 
   try {
     await db.collection("products").insertMany(sampleProducts)
-    console.log("Inserted sample products")
+    // console.log("Inserted sample products")
   } catch (error) {
-    console.log("Products already exist")
+    // console.log("Products already exist")
   }
 
   // Sample regular user
@@ -242,9 +242,9 @@ async function insertSampleData(db) {
 
   try {
     await db.collection("users").insertOne(regularUser)
-    console.log("Created test user")
+    // console.log("Created test user")
   } catch (error) {
-    console.log("Test user already exists")
+    // console.log("Test user already exists")
   }
 }
 

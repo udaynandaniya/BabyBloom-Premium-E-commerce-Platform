@@ -283,7 +283,6 @@ export default function ReturnPolicyPage() {
           </Card>
         </div>
       </main>
-      <Footer />
     </div>
   )
 }

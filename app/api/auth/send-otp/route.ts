@@ -1,3 +1,4 @@
+export const dynamic = 'force-dynamic';
 //C:\Users\UDAYN\Downloads\Projects\mahadev-baby - Copy\app\api\auth\send-otp\route.ts
 import { type NextRequest, NextResponse } from "next/server"
 

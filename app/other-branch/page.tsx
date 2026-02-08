@@ -1,5 +1,4 @@
-import { Header } from "@/components/header"
-import { Footer } from "@/components/footer"
+
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { MapPin, Phone, Instagram, ExternalLink, Store, Clock } from 'lucide-react'
@@ -230,7 +229,6 @@ export default function OtherBranchPage() {
           </Card>
         </div>
       </main>
-      <Footer />
     </div>
   )
 }

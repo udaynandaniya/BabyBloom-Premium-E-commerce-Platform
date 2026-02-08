@@ -238,7 +238,6 @@ export default function DeliveryInfoPage() {
           </Card>
         </div>
       </main>
-      <Footer />
     </div>
   )
 }

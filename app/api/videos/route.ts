@@ -1,3 +1,4 @@
+export const dynamic = 'force-dynamic';
 import { NextResponse } from "next/server"
 import { VideoModel } from "@/lib/models/videoModel"
 import { dbConnect } from "@/lib/mongodb"

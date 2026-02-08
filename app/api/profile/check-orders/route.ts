@@ -1,3 +1,4 @@
+export const dynamic = 'force-dynamic';
 import { type NextRequest, NextResponse } from "next/server"
 import User from "@/lib/models/User"
 import OrderModel from "@/lib/models/order"

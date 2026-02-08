@@ -119,7 +119,7 @@ export default function BathPage() {
         if (!response.ok) throw new Error("Failed to fetch")
 
         const data = await response.json()
-        console.log("📦 Fetched bath items:", data)
+        // console.log("📦 Fetched bath items:", data)
 
         if (reset || page === 1) {
           setBathItems(data.data || [])
@@ -191,7 +191,7 @@ export default function BathPage() {
 
 
   const addToCart = (item: BathItem) => {
-    console.log("🛒 Adding to cart:", item  )
+    // console.log("🛒 Adding to cart:", item  )
     try {
       const savedCart = localStorage.getItem("cart")
       const cartData = savedCart ? JSON.parse(savedCart) : []
@@ -430,7 +430,7 @@ export default function BathPage() {
               const discount = getDiscountPercentage(item.sellingPrice, item.actualPrice)
               const isInWishlist = wishlist.includes(item._id)
 
-              console.log("\n🛒 Rendering bath item:", item)
+              // console.log("\n🛒 Rendering bath item:", item)
 
               return (
                 <Card

@@ -352,7 +352,7 @@ async function deleteCloudinaryImages(imageUrls: string[]) {
 
     if (!cloudName || !apiKey || !apiSecret) {
       console.warn("Cloudinary credentials not found. Images will not be deleted from Cloudinary.")
-      console.log("Available env vars:", { cloudName: !!cloudName, apiKey: !!apiKey, apiSecret: !!apiSecret })
+      // console.log("Available env vars:", { cloudName: !!cloudName, apiKey: !!apiKey, apiSecret: !!apiSecret })
       return
     }
 
@@ -384,11 +384,11 @@ async function deleteCloudinaryImages(imageUrls: string[]) {
         const result = await response.json()
 
         if (result.result === "ok") {
-          console.log(`Successfully deleted image: ${publicId}`)
+          // console.log(`Successfully deleted image: ${publicId}`)
         } else if (result.result === "not found") {
-          console.log(`Image already deleted or not found: ${publicId}`)
+          // console.log(`Image already deleted or not found: ${publicId}`)
         } else {
-          console.warn(`Failed to delete image ${publicId}:`, result)
+          // console.warn(`Failed to delete image ${publicId}:`, result)
         }
       } catch (error) {
         console.error(`Error deleting image ${imageUrl}:`, error)
