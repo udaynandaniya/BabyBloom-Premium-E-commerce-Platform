@@ -8,7 +8,6 @@ export async function GET(request: NextRequest) {
   try {
     await dbConnect()
 
-    // Check admin authentication
     const token = request.cookies.get("jwt-token")?.value
     if (!token) {
       return NextResponse.json({ error: "Authentication required" }, { status: 401 })
@@ -19,10 +18,8 @@ export async function GET(request: NextRequest) {
       return NextResponse.json({ error: "Admin access required" }, { status: 403 })
     }
 
-    // Fetch all users with order statistics
     const users = await User.find({}).select("-password").sort({ createdAt: -1 }).lean()
 
-    // Calculate order statistics for each user
     const usersWithStats = await Promise.all(
       users.map(async (user) => {
         const orders = await OrderModel.find({ userEmail: user.email }).lean()
@@ -32,7 +29,7 @@ export async function GET(request: NextRequest) {
         return {
           ...user,
           _id: user._id.toString(),
-          role: user.isAdmin ? "admin" : "user", // Map isAdmin to role
+          role: user.isAdmin ? "admin" : "user", 
           isActive: user.isVerified, // Use isVerified as active status
           totalOrders,
           totalSpent,

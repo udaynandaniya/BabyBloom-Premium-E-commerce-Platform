@@ -263,18 +263,7 @@ export function Header() {
                       ))}
                     </div>
 
-                    {/* Mobile Search */}
-                    <div className="mt-6 px-3">
-                      <Button
-                        variant="outline"
-                        className="w-full justify-start bg-transparent"
-                        onClick={() => setIsOpen(false)}
-                      >
-                        <Search className="h-4 w-4 mr-2" />
-                        Search Products
-                      </Button>
-                    </div>
-
+                  
                     {/* Mobile Cart & Wishlist */}
                     <div className="mt-4 px-3 space-y-2">
                       <Button variant="outline" className="w-full justify-start bg-transparent" asChild>
@@ -283,12 +272,7 @@ export function Header() {
                           Cart ({cartCount})
                         </Link>
                       </Button>
-                      <Button variant="outline" className="w-full justify-start bg-transparent" asChild>
-                        <Link href="/wishlist" onClick={() => setIsOpen(false)}>
-                          <Heart className="h-4 w-4 mr-2" />
-                          Wishlist ({wishlistCount})
-                        </Link>
-                      </Button>
+                   
                     </div>
                   </nav>
 

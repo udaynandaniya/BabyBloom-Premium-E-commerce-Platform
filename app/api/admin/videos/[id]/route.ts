@@ -8,16 +8,13 @@ export async function PUT(request: Request, { params }: { params: { id: string }
     await dbConnect()
     const data = await request.json()
 
-    // Validate with Zod schema
     const validatedData = videoSchema.parse(data)
 
-    // Find existing video
     const existingVideo = await VideoModel.findById(params.id)
     if (!existingVideo) {
       return NextResponse.json({ success: false, message: "Video not found" }, { status: 404 })
     }
 
-    // Check product code uniqueness (excluding current video)
     const duplicateVideo = await VideoModel.findOne({
       productCode: validatedData.productCode,
       _id: { $ne: params.id },
@@ -26,7 +23,6 @@ export async function PUT(request: Request, { params }: { params: { id: string }
       return NextResponse.json({ success: false, message: "Product code already exists" }, { status: 400 })
     }
 
-    // Update video
     const updatedVideo = await VideoModel.findByIdAndUpdate(params.id, validatedData, {
       new: true,
       runValidators: true,
@@ -61,23 +57,11 @@ export async function DELETE(request: Request, { params }: { params: { id: strin
   try {
     await dbConnect()
 
-    // Find the video to get video URL before deletion
     const video = await VideoModel.findById(params.id)
     if (!video) {
       return NextResponse.json({ success: false, message: "Video not found" }, { status: 404 })
     }
 
-    // Delete video from Cloudinary (if you have this utility function)
-    // if (video.videoUrl) {
-    //   try {
-    //     await deleteCloudinaryVideo(video.videoUrl)
-    //   } catch (error) {
-    //     console.warn("Failed to delete video from Cloudinary:", error)
-    //     // Continue with database deletion even if Cloudinary deletion fails
-    //   }
-    // }
-
-    // Delete video from database
     await VideoModel.findByIdAndDelete(params.id)
 
     return NextResponse.json({

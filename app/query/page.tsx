@@ -148,83 +148,7 @@ export default function QueryPage() {
                 </CardContent>
               </Card>
 
-              {/* Direct Contact */}
-              <Card>
-                <CardHeader>
-                  <CardTitle className="flex items-center gap-2">
-                    <Phone className="h-5 w-5 text-blue-500" />
-                    Direct Contact
-                  </CardTitle>
-                  <CardDescription>
-                    Need immediate assistance? Contact us directly
-                  </CardDescription>
-                </CardHeader>
-                <CardContent className="space-y-4">
-                  <div className="space-y-3">
-                    <div className="flex items-center gap-3">
-                      <Phone className="h-4 w-4 text-blue-500 flex-shrink-0" />
-                      <div>
-                        <p className="font-medium">Divyesh Nanadaniya</p>
-                        <div className="space-y-1">
-                          <a 
-                            href="tel:9913737023"
-                            className="text-blue-600 hover:text-blue-800 transition-colors text-sm block"
-                          >
-                            +91 99137 37023
-                          </a>
-                          <a 
-                            href="tel:9898893380"
-                            className="text-blue-600 hover:text-blue-800 transition-colors text-sm block"
-                          >
-                            +91 98988 93380
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                    
-                    <div className="flex items-center gap-3">
-                      <Mail className="h-4 w-4 text-green-500 flex-shrink-0" />
-                      <a 
-                        href="mailto:mahadevbabyshop5@gmail.com"
-                        className="text-green-600 hover:text-green-800 transition-colors text-sm"
-                      >
-                        mahadevbabyshop5@gmail.com
-                      </a>
-                    </div>
-                    
-                    <div className="flex items-start gap-3">
-                      <MapPin className="h-4 w-4 text-purple-500 flex-shrink-0 mt-0.5" />
-                      <div className="text-sm">
-                        <p>Vithalani Complex</p>
-                        <p>Mangrol, Gujarat</p>
-                        <a 
-                          href="https://maps.app.goo.gl/HfPkkBRqkwAh1JVR9"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-purple-600 hover:text-purple-800 transition-colors inline-flex items-center gap-1 mt-1"
-                        >
-                          <ExternalLink className="h-3 w-3" />
-                          View on Map
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="pt-4 border-t">
-                    <a 
-                      href="https://wa.me/919913737023"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="w-full"
-                    >
-                      <Button variant="outline" className="w-full text-green-600 border-green-600 hover:bg-green-50">
-                        <Phone className="h-4 w-4 mr-2" />
-                        WhatsApp Chat
-                      </Button>
-                    </a>
-                  </div>
-                </CardContent>
-              </Card>
+             
             </div>
           </div>
 
@@ -263,7 +187,6 @@ export default function QueryPage() {
           </Card>
         </div>
       </main>
-      <Footer />
     </div>
   )
 }
